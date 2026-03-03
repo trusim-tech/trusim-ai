@@ -10,9 +10,13 @@ class Settings(BaseSettings):
     nokia_api_key: str = ""
     fastapi_port: int = 8090
     ws_port: int = 8091
+    allowed_origins: str = "http://localhost:3000,http://localhost:8084"
 
     class Config:
         env_file = ".env"
+
+    def get_cors_origins(self) -> list[str]:
+        return [o.strip() for o in self.allowed_origins.split(",") if o.strip()]
 
 
 settings = Settings()
