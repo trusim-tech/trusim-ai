@@ -1,9 +1,17 @@
 [project]
 name = "trusim-ai"
 version = "0.1.0"
-description = "Add your description here"
+description = "TruSim AI Agent - Workforce verification powered by Google ADK and Gemini"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "google-adk>=1.26.0",
+    "google-genai>=1.14.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.34.0",
+    "websockets>=14.0",
+    "httpx>=0.28.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "python-dotenv>=1.0.0",
 ]
